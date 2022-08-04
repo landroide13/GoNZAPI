@@ -1,7 +1,15 @@
 
 from django.contrib import admin
 from django.urls import path
+from rest_framework import routers
+
+from Api.views import TourViewSet, UserViewSet
+from django.conf.urls import include
+
+router = routers.DefaultRouter()
+router.register('tours', TourViewSet)
+router.register('Users', UserViewSet)
 
 urlpatterns = [
-    path('', admin.site.urls),
+    path('', include(router.urls)),
 ]
