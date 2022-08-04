@@ -1,5 +1,4 @@
 
-
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'Api',
 ]
 
 MIDDLEWARE = [
@@ -60,6 +60,12 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'GoNZ.wsgi.application'
+
+#REST_FRAMEWORK = {
+#  'DEFAULT_PERMISSION_CLASSES':{
+#       'rest_framework.permissions.IsAuthenticated'
+#   }
+#}
 
 
 # Database
