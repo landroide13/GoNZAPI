@@ -1,6 +1,6 @@
 
 from rest_framework import serializers
-from .models import Tour
+from .models import Tour, Agent
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 
@@ -8,6 +8,11 @@ class TourSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tour
         fields = ('id', 'name', 'description')
+
+class AgentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Agent
+        fields = ('id', 'first_name', 'last_name')        
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
