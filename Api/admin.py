@@ -15,7 +15,6 @@ class TourAdmin(admin.ModelAdmin):
 class AgentAdmin(admin.ModelAdmin):
     fields = ['first_name', 'last_name']
     list_display = ['first_name', 'last_name']
-    #list_filter= ['genre']
     search_fields = ['first_name']
 
 

@@ -12,7 +12,7 @@ class TourSerializer(serializers.ModelSerializer):
 class AgentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Agent
-        fields = ('id', 'first_name', 'last_name')        
+        fields = ('id', 'first_name', 'last_name', 'department')        
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
