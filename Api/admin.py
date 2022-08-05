@@ -18,8 +18,15 @@ class TourAdmin(admin.ModelAdmin):
 @admin.register(Agent)
 class AgentAdmin(admin.ModelAdmin):
     fields = ['first_name', 'last_name']
-    list_display = ['first_name', 'last_name']
+    list_display = ['id','first_name', 'last_name']
     search_fields = ['first_name']
+
+
+
+
+
+
+
 
 
 
