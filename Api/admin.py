@@ -4,6 +4,10 @@ from .models import Tour, Agent
 #admin.site.register(Tour)
 #admin.site.register(Agent)
 
+admin.site.site_header = "GoNZ Corporate"
+admin.site.site_title = "GO-NZ"
+admin.site.index_title = "Welcome to the GoNZ Admin Area"
+
 @admin.register(Tour)
 class TourAdmin(admin.ModelAdmin):
     fields = ['name', 'description']
