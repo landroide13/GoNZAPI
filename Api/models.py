@@ -12,9 +12,10 @@ class Tour(models.Model):
         return self.name
 
 class Agent(models.Model):
+
     first_name = models.CharField(max_length=55, blank=False)
     last_name = models.CharField(max_length=55, blank=False)
-    #group = models.CharField(max_length=55, default=Group.objects.get_or_create(name='Agents'))
+    #group = models.OneToOneField(Group.objects.get(name='Agents'), on_delete=models.CASCADE)
 
     def __str__(self):
         return self.first_name
