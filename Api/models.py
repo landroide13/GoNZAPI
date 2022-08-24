@@ -3,7 +3,6 @@ from django.contrib.auth.models import User, Group
 # Create your models here.
 
 
-
 class Tour(models.Model):
     name = models.CharField(max_length=55, blank=False)
     description = models.TextField(max_length=300, blank=False)
@@ -12,6 +11,7 @@ class Tour(models.Model):
         return self.name
 
 class Agent(models.Model):
+    #user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     first_name = models.CharField(max_length=55, blank=False)
     last_name = models.CharField(max_length=55, blank=False)
