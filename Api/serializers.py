@@ -11,6 +11,7 @@ class TourSerializer(serializers.ModelSerializer):
 
 class AgentSerializer(serializers.ModelSerializer):
     class Meta:
+        #agent = User.objects.filter(groups_name='Agents')
         model = Agent
         fields = ('id', 'first_name', 'last_name')        
 
@@ -25,6 +26,7 @@ class UserSerializer(serializers.ModelSerializer):
         token = Token.objects.create(user=user)
         return user
 
+    
 
 
 
